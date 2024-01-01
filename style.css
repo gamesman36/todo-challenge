@@ -1,0 +1,21 @@
+body {
+    font-family: Rubik;
+    background-color: #FFDE03;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-item {
+    padding: 10px;
+    margin: 3px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+}
