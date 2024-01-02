@@ -7,8 +7,8 @@ const model = {
     },
     data: {
         entries: [
-            { text: "Test", status: "pending" },
-            { text: "Something else", status: "pending" },
+            { title: "Test", status: "pending" },
+            { title: "Something else", status: "pending" },
         ],
     },
 };

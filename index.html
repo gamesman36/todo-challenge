@@ -18,11 +18,16 @@
 <body>
     <div id="app"></div>
     <script>
+        loadTasksFromLocalStorage();
+        if (model.data.entries.length === 0) {
+            fetchTasks();
+        }
         updateView();
-        fetchTasks();
+
         function updateView() {
             if (model.app.currentPage == "main") updateViewMainPage();
         }
     </script>
 </body>
+
 </html>

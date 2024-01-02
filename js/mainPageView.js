@@ -8,17 +8,19 @@ function updateViewMainPage() {
 
 function createListHTML() {
     let html = "";
-    
     for (let i = 0; i < model.data.entries.length; i++) {
         let entry = model.data.entries[i];
-        let taskClass = entry.status === 'completed' ? 'task-completed' : 'task-pending';
         
-        html += `
-            <li class="todo-item ${taskClass}" onclick="toggleTaskState(${i})">
-                ${entry.title}
-            </li>
-        `;
+        let taskClass = "";
+        if (entry.status === "pending") {
+            taskClass = "todo-item pending";
+        } else if (entry.status === "completed") {
+            taskClass = "todo-item completed";
+        } else {
+            taskClass = "todo-item deleted"
+        }
+        
+        html += `<li class="${taskClass}" onclick="toggleTaskState(${i})">${entry.title}</li>`;
     }
-    
     return html;
 }
