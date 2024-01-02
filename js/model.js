@@ -6,9 +6,6 @@ const model = {
         mainPage: {},
     },
     data: {
-        entries: [
-            { title: "Test", status: "pending" },
-            { title: "Something else", status: "pending" },
-        ],
+        entries: [],
     },
 };
