@@ -64,12 +64,14 @@ function toggleTaskState(index) {
 }
 
 function saveTasksToLocalStorage() {
-    localStorage.setItem("tasks", JSON.stringify(model.data.entries));
+    const activeTasks = model.data.entries.filter(task => task.status !== 'deleted');
+    localStorage.setItem("tasks", JSON.stringify(activeTasks));
 }
 
 function loadTasksFromLocalStorage() {
     const savedTasks = JSON.parse(localStorage.getItem("tasks"));
     if (savedTasks) {
-        model.data.entries = savedTasks;
+        const activeTasks = savedTasks.filter(task => task.status !== 'deleted');
+        model.data.entries = activeTasks;
     }
 }
