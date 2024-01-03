@@ -1,8 +1,10 @@
 body {
     font-family: Rubik;
+    font-size: 16pt;
     background-color: #FFDE03;
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 
 ul {

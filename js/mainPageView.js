@@ -7,7 +7,7 @@ function updateViewMainPage() {
 }
 
 function createListHTML() {
-    let html = "";
+    let html = "<h1>My<br /> To-Do</h1>";
     for (let i = 0; i < model.data.entries.length; i++) {
         let entry = model.data.entries[i];
         
